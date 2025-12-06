@@ -1,0 +1,26 @@
+
+@media screen and (max-width:900px) {
+    body {
+        background-size: 200%;
+    }
+    
+    .Cabeçalho__icon img {
+        margin: 0 2.83rem 0 0;
+    }
+    .Cabeçalho__logotipo h1 {
+        font-size: x-large;
+    }
+    #navegação ul {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        background-size: cover;
+    }
+
+    #cabeçalho {
+        justify-content: center;
+    }
+}

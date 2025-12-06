@@ -7,11 +7,21 @@
     font-family: "Red Hat Display", sans-serif;
 }
 body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
     background: url(../img/City\ 2.jpg) no-repeat;
     background-color: #000;
-    background-size: 115%;
+    background-position: center;
+    background-size: cover;
+    -webkit-backdrop-filter: brightness(0.5);
+    backdrop-filter: brightness(0.4);
+
+    transition: .3s ease-in-out all;
 }
 
+/* header - cabeçalho */
 #cabeçalho {
     margin: 1.35rem 0 0 0.55rem;
 
@@ -20,14 +30,20 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 }
 
 .Cabeçalho__icon img {
     width: 50px;
 
     cursor: pointer;
+    border-radius: 20px;
+
+    transition: .2s ease all;
+}
+.Cabeçalho__icon img:hover {
+    background-color: #0a0a0ad5;
 }
 
 .Cabeçalho__logotipo h1 {
@@ -38,7 +54,7 @@ body {
 .Cabeçalho__logotipo h1 span {
     font-weight: 100;
 }
-
+/* Header - barra-navegação */
 #navegação ul {
     margin: 0 2rem 0 0;
     gap: 2rem;
@@ -53,9 +69,11 @@ body {
     text-decoration: none;
     font-size: medium;
     font-weight: 700;
+
+    transition: 0.2s linear all;
 }
 #navegação ul li a:hover {
-    color: #f5f5f5;
+    color: #f5f5f5be;
 }
 #navegação ul li a:active {
     color: #111111;
@@ -77,40 +95,10 @@ body {
     white-space: pre-line;
 }
 .principal__text div:nth-child(2) {
-    width: 40%;
+    width: clamp(200px, 30%, 700px);
 
     text-align: justify;
     font-size: medium;
     font-weight: 100;
     white-space: wrap;
-}
-
-@media screen and (max-width:900px) {
-    body {
-        background-size: 200%;
-    }
-    
-    .Cabeçalho__icon img {
-        margin: 0 2.83rem 0 0;
-    }
-    .Cabeçalho__logotipo h1 {
-        font-size: x-large;
-    }
-    #navegação ul {
-        margin: 0;
-    }
-
-    .principal__text div:nth-child(2) {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width:610px) {
-    body {
-        background-size: 500%;
-    }
-
-    #cabeçalho {
-        justify-content: center;
-    }
 }
